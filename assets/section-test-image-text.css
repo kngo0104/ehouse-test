@@ -1,0 +1,8 @@
+.section__test-image-text {
+  display: flex;
+}
+
+.section__test-image-text img {
+  width: 66.66%;
+  margin-left: auto;
+}
