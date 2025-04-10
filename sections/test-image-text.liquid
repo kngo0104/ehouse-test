@@ -1,17 +1,22 @@
 {{ 'section-test-image-text.css' | asset_url | stylesheet_tag }}
 
 <div class="section__test-image-text">
-  {%- if section.settings.image -%}
-    {{ 
-      section.settings.image
-      | image_url: width: '900'
-      | image_tag: loading: 'lazy', class: 'test-image-text__image'
-    }}
-  {%- else -%}
-    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- endif -%}
+  <div class="test-image-text__image-container">
+  </div>
+  <div class="test-image-text__content">
+    <div class="content__inner">
+      <h4>{{ section.settings.heading }}</h4>
+      <span>{{ section.settings.subtitle }}</span>
+      <a href="{{ section.settings.link }}">{{ section.settings.text }}</a>
+    </div>
+  </div>
 </div>
 
+{% style %}
+  .test-image-text__image-container {
+    background-image: url({{ section.settings.image | image_url: width: '900' }});
+  }
+{% endstyle %}
 {% schema %}
 {
   "name": "Test Image w/ Text",
