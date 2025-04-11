@@ -1,0 +1,108 @@
+{{ 'section-test-cta-blocks.css' | asset_url | stylesheet_tag }}
+
+<div class="section__test-cta-blocks">
+  {%- for block in section.blocks -%}
+  <div class="test-cta-block">
+    <div class="test-cta-blocks__image" style="background-image: url({{ block.settings.image | image_url: width: 500 }})"></div>
+    <div class="test-cta-blocks__content">
+      <h4>{{ block.settings.heading }}</h4>
+      <span>{{ block.settings.subtitle }}</span>
+      {%- if block.settings.link_text_one -%}
+      <div class="content_links">
+        <a href="{{ block.settings.link_one }}">{{ block.settings.link_text_one }}</a>
+        {%- if block.settings.link_text_two -%}
+        <a href="{{ block.settings.link_two }}">{{ block.settings.link_text_two }}</a>
+        {%- endif -%}
+        {%- if block.settings.link_text_three -%}
+        <a href="{{ block.settings.link_three }}">{{ block.settings.link_text_three }}</a>
+        {%- endif -%}
+        {%- if block.settings.link_text_four -%}
+        <a href="{{ block.settings.link_four }}">{{ block.settings.link_text_four }}</a>
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- endfor -%}
+</div>
+
+{% style %}
+  .test-image-text__image-container {
+    background-image: url({{ section.settings.image | image_url: width: '900' }});
+  }
+{% endstyle %}
+{% schema %}
+{
+  "name": "Test CTA Blocks",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "cta",
+      "name": "CTA",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "link_text_one",
+          "label": "Link Text 1"
+        },
+        {
+          "type": "url",
+          "id": "link_one",
+          "label": "Link 1"
+        },
+                {
+          "type": "inline_richtext",
+          "id": "link_text_two",
+          "label": "Link Text 2"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "Link 2"
+        },
+                {
+          "type": "inline_richtext",
+          "id": "link_text_three",
+          "label": "Link Text 3"
+        },
+        {
+          "type": "url",
+          "id": "link_three",
+          "label": "Link 3"
+        },
+                {
+          "type": "inline_richtext",
+          "id": "link_text_four",
+          "label": "Link Text 4"
+        },
+        {
+          "type": "url",
+          "id": "link_four",
+          "label": "Link 4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Test CTA Blocks"
+    }
+  ]
+}
+{% endschema %}

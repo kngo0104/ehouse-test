@@ -63,10 +63,53 @@
         "text": "SHOP SUMMER ESSENTIALS",
         "link": ""
       }
+    },
+    "test_cta_blocks_7dNytG": {
+      "type": "test-cta-blocks",
+      "blocks": {
+        "cta_egcYWG": {
+          "type": "cta",
+          "settings": {
+            "image": "shopify://shop_images/block-image1.png",
+            "heading": "NEW ARRIVALS",
+            "subtitle": "Our latest Summer styles. Fresh. Fun. Fabulous",
+            "link_text_one": "WOMEN",
+            "link_one": "shopify://collections",
+            "link_text_two": "MEN",
+            "link_two": "shopify://collections",
+            "link_text_three": "KIDS",
+            "link_three": "shopify://collections",
+            "link_text_four": "HOME",
+            "link_four": "shopify://collections"
+          }
+        },
+        "cta_wWFQyY": {
+          "type": "cta",
+          "settings": {
+            "image": "shopify://shop_images/block-image.png",
+            "heading": "COLLEGE BOUND",
+            "subtitle": "New places and new faces. Same great style.",
+            "link_text_one": "SHOP DORM DECOR",
+            "link_one": "shopify://collections",
+            "link_text_two": "",
+            "link_two": "",
+            "link_text_three": "",
+            "link_three": "",
+            "link_text_four": "",
+            "link_four": ""
+          }
+        }
+      },
+      "block_order": [
+        "cta_egcYWG",
+        "cta_wWFQyY"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "test_hero_z4TePw",
-    "test_image_text_eAeckC"
+    "test_image_text_eAeckC",
+    "test_cta_blocks_7dNytG"
   ]
 }
