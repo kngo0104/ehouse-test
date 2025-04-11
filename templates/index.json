@@ -105,11 +105,44 @@
         "cta_wWFQyY"
       ],
       "settings": {}
+    },
+    "test_icon_banner_rMG6eJ": {
+      "type": "test-icon-banner",
+      "blocks": {
+        "cta_dCMipt": {
+          "type": "cta",
+          "settings": {
+            "image": "shopify://shop_images/shipping-icon.svg",
+            "text": "FREE SHIPPING ON ALL ORDERS"
+          }
+        },
+        "cta_J86cLq": {
+          "type": "cta",
+          "settings": {
+            "image": "shopify://shop_images/returns-icon.svg",
+            "text": "FREE RETURNSON ALL ORDERS"
+          }
+        },
+        "cta_dnhz8T": {
+          "type": "cta",
+          "settings": {
+            "image": "shopify://shop_images/checkout-icon.svg",
+            "text": "SAFE & SECURE CHECKOUT"
+          }
+        }
+      },
+      "block_order": [
+        "cta_dCMipt",
+        "cta_J86cLq",
+        "cta_dnhz8T"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "test_hero_z4TePw",
     "test_image_text_eAeckC",
-    "test_cta_blocks_7dNytG"
+    "test_cta_blocks_7dNytG",
+    "test_icon_banner_rMG6eJ"
   ]
 }

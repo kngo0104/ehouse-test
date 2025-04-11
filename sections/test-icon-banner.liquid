@@ -1,0 +1,46 @@
+{{ 'section-test-icon-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="section__test-icon-banner">
+  {%- for block in section.blocks -%}
+  <div class="test-icon-banner__icon">
+    {%- if block.settings.image -%}
+    {{ block.settings.image | image_url: width: 80 | image_tag: loading: 'lazy' }}
+    {%- endif -%}
+
+    {%- if block.settings.text -%}
+    <span>{{ block.settings.text }}<span>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Test Icon Banner",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "cta",
+      "name": "CTA",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Test Icon Banner"
+    }
+  ]
+}
+{% endschema %}

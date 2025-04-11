@@ -2222,7 +2222,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
-  left: 2.2rem;
+  right: 0;
+  top: 0;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
