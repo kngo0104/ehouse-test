@@ -2,8 +2,14 @@
 
 <div class="section__test-hero">
   <div class="test-hero__content">
+    {%- if section.settings.subtitle -%}
     <span>{{ section.settings.subtitle }}</span>
+    {%- endif -%}
+
+    {%- if section.settings.heading -%}
     <h2>{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
     <div class="test-hero__button-container">
     {%- for block in section.blocks -%}
     <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>

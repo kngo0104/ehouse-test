@@ -5,8 +5,14 @@
   <div class="test-cta-block">
     <div class="test-cta-blocks__image" style="background-image: url({{ block.settings.image | image_url: width: 500 }})"></div>
     <div class="test-cta-blocks__content">
+      {%- if block.settings.heading -%}
       <h4>{{ block.settings.heading }}</h4>
+      {%- endif -%}
+
+      {%- if block.settings.subtitle -%}
       <span>{{ block.settings.subtitle }}</span>
+      {%- endif -%}
+
       {%- if block.settings.link_text_one -%}
       <div class="content_links">
         <a href="{{ block.settings.link_one }}">{{ block.settings.link_text_one }}</a>

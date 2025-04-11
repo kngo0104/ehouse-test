@@ -5,8 +5,14 @@
   </div>
   <div class="test-image-text__content">
     <div class="content__inner">
+      {%- if section.settings.heading -%}
       <h4>{{ section.settings.heading }}</h4>
+      {%- endif -%}
+
+      {%- if section.settings.subtitle -%}
       <span>{{ section.settings.subtitle }}</span>
+      {%- endif -%}
+      
       <a href="{{ section.settings.link }}">{{ section.settings.text }}</a>
     </div>
   </div>
